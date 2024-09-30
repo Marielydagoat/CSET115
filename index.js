@@ -1,46 +1,58 @@
-let initialColors = [];
+var options = document.querySelectorAll('.choice')
+var  value = choice.textContent;
+var computerChoice = choice[Math.floor(Math.random() * 3)];
+var rock = 1
+var paper = 2
+var scissors = 3
+value = [rock, paper, scissors]
 
-    window.onload = function() { //window.load ensures that the fuction works on the whole page
-        let buttons = document.getElementsByClassName('button');
-        let defaultColors = ["red", "green", "blue", "yellow", "purple", "orange", "pink", "brown", "cyan", "magenta"]; // Array of initial colors
 
-        // Set the initial colors of all buttons and store them
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].style.backgroundColor = defaultColors[i];
-            initialColors.push(defaultColors[i]); // Save the initial color
-        }
+function rock(){
+    if (computerChoice === 1 && value[0] ){
+    
+       x =  document.createElement("h1")
+        h1.textContent = "TIE!"
     }
-
-    function randomcolor() {
-        let red = Math.floor(Math.random() * 256);
-        let green = Math.floor(Math.random() * 256);
-        let blue = Math.floor(Math.random() * 256);
-        return `rgb(${red}, ${green}, ${blue})`;
+    else if (computerChoice === 2 && value[0]){
+    x= document.createElement("h1")
+     h1.textContent = "YOU LOST:("
     }
-
-    function reset() {
-        let buttons = document.getElementsByClassName('button');
-        // Restore the initial colors of all buttons
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].style.backgroundColor = initialColors[i];
-        }
+    else if (computerChoice === 3 && value[0]){
+       x =  document.createElement("h1")
+        h1.textContent = "YOU WON!"
     }
+    return x
 
-    function changepara(x) {
-        let selectcolor = document.getElementById('color').value;
-        let buttons = document.getElementsByClassName('button');
+}
 
-        for (let i = 0; i < buttons.length; i++) {
-            if (selectcolor === "red") {
-                buttons[i].style.backgroundColor = "red";
-            } else if (selectcolor === "green") {
-                buttons[i].style.backgroundColor = "green";
-            } else if (selectcolor === "blue") {
-                buttons[i].style.backgroundColor = "blue";
-            } else if (selectcolor === "random") {
-                buttons[i].style.backgroundColor = randomcolor();
-            } else if (selectcolor === "reset") {
-                reset();
-            }
-        }
+function paper(){
+    if (computerChoice === 1 && value[1] ){
+         document.createElement("h1")
+        h1.textContent = "YOU WON!"
     }
+    else if (computerChoice === 2 && value[1]){
+        document.createElement("h1")
+        h1.textContent = "TIE!"
+    }
+    else if (computerChoice === 3 && value[1]){
+       document.createElement("h1")
+        h1.textContent = "YOU LOST:("
+    }
+}
+
+function scissors(){
+    if (computerChoice === 1 && value[2] ){
+        document.createElement("h1")
+        h1.textContent = "YOU LOST:("
+    }
+    else if (computerChoice === 2 && value[2]){
+         document.createElement("h1")
+        h1.textContent = "YOU WON!"
+    }
+    else if (computerChoice === 3 && value[2]){
+        document.createElement("h1")
+        h1.textContent = "TIE!"
+    }
+}
+
+
