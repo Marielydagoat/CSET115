@@ -1,5 +1,24 @@
-h1{
-text-align: center;
-color: brown;
+.page{
+background-color: rgb(212, 125, 175);
+width: 474px;
+}
+#rock{
+    background-color: rgb(132, 204, 233);
+}
 
+#paper{
+    background-color: rgb(193, 152, 232);
+}
+
+#scissors{
+    background-color: rgb(133, 192, 172);
+}
+
+#score{
+    width: 474px;
+    background-color: rgb(142, 142, 203);
+}
+#result{
+    width: 474px;
+    background-color: rgb(220, 217, 120);
 }
